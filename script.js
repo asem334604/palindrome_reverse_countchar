@@ -9,7 +9,7 @@ function isPalindrome(str) {
     str = str.toLowerCase();
     const left = str.slice(0, str.length / 2);
     const right = str.slice(-str.length / 2, str.length).split('').reverse().join('');
-    return (left === right) ? 'true' : 'false';
+    return (left === right);
 }
 
 function reverseString() {
@@ -36,10 +36,9 @@ function countChar(str, c) {
         return 'You entered more than one symbol';
     else if (str === '')
         return  'Enter a string';
-    const arr = str.split('');
     let count = 0;
-    for (let i in arr){
-        if (arr[i] === c)
+    for (let i in str){
+        if (str.at(i) === c)
             count++;
     }
     return count;
